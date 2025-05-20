@@ -1,0 +1,43 @@
+package ch05.sec11;
+
+public class MainStringArrayArgument {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		 * Main() 메소드의  String[] 매개변수 용도
+		 */
+		
+		
+		if(args.length != 2) {
+			System.out.println("프로그램 입력 값 확인해 주세요");
+			System.exit(0);
+		}
+		
+		
+		String strNum1 = args[0];
+		String strNum2 = args[1];
+		
+		int num1 = Integer.parseInt(strNum1);
+		int num2 = Integer.parseInt(strNum2);
+		
+		int result = num1 + num2;
+		System.out.println(num1 + " + " + num2 + " = " + result);
+		
+		
+		/*
+		 * 향상된 for문
+		 */
+		
+		//로컬 변수이기때문에 포문 밖에서 scores(변수명) 쓸 수 없다
+		
+		int[] scores = { 95,71,84,93,87};
+		
+//		int score = 0;
+		for (int score : scores) {
+			System.out.println("score=" + score);
+		}
+	}
+
+}
